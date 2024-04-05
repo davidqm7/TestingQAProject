@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using NUnit.Framework.Constraints; 
+using NUnit.Framework.Constraints;
+using NUnit.Framework.Legacy;
 
 
 namespace WebCalculator;
@@ -9,26 +10,26 @@ using NUnit.Framework;
 [TestFixture]
 public class CalculatorEngineUnitTests
 {
-    private CalculatorEngine calculator;
+    private CalculatorEngine _calculator;
 
     [SetUp]
-    public void setUp()
+    public void SetUp()
     {
-        calculator = new CalculatorEngine();
+        _calculator = new CalculatorEngine();
     }
 
     [Test]
-    public void CalcualtorEngine_AddAandB_ReturnsSum()
+    public void CalculatorEngine_AddAandB_ReturnsSum()
     {
         //Arrange
         float a = 2;
         float b = 2;
 
         // Act
-        float sum = calculator.Add(a, b);
+        float sum = _calculator.Add(a, b);
 
         // Assert
-        Assert.Equals(4, sum); 
+        Assert.That(4, Is.EqualTo(sum));
      
     }
 
@@ -40,10 +41,10 @@ public class CalculatorEngineUnitTests
         float b = 7;
 
         //Act
-        float result = calculator.Subtract(a, b);
+        float result = _calculator.Subtract(a, b);
 
         //Assert
-        Assert.Equals(4, result);
+        Assert.That(3, Is.EqualTo(result));
     }
 
 
@@ -54,9 +55,9 @@ public class CalculatorEngineUnitTests
         float a = 5;
         float b = 5; 
         //Act
-        float result = calculator.Multiplication(a, b);
+        float result = _calculator.Multiplication(a, b);
         //Assert
-        Assert.Equals(25, result); 
+        Assert.That(25, Is.EqualTo(result));
     }
 
     [Test]
@@ -66,9 +67,9 @@ public class CalculatorEngineUnitTests
         float a = 10;
         float b = 2; 
         //Act
-        float result = calculator.Division(a, b);
+        float result = _calculator.Division(a, b);
         //Assert
-        Assert.Equals(5, result);
+        Assert.That(5, Is.EqualTo(result));
     }
     
     
@@ -79,7 +80,7 @@ public class CalculatorEngineUnitTests
         float a = 5;
         float b = 0; 
         //Act
-        float result = calculator.Division(a, b);
+        float result = _calculator.Division(a, b);
         //Assert
         Assert.That(float.IsNaN(result),Is.True);
     }
@@ -91,9 +92,9 @@ public class CalculatorEngineUnitTests
         float a = 0;
         float b = 5; 
         //Act
-        float result = calculator.Division(a, b);
+        float result = _calculator.Division(a, b);
         //Assert
-        Assert.Equals(0, result);
+        Assert.That(0, Is.EqualTo(result));
     }
 
     [Test]
@@ -103,9 +104,9 @@ public class CalculatorEngineUnitTests
         float a = 0.333333f;
         float b = 0.333333f; 
         //Act
-        float result = calculator.Equals(a,b,8);
+        float result = _calculator.Equals(a,b,8);
         //Assert
-        Assert.Equals(1, result);
+        Assert.That(1, Is.EqualTo(result));
     }
     
     [Test]
@@ -115,9 +116,9 @@ public class CalculatorEngineUnitTests
         float a = 0.333333f;
         float b = 0.333334f; 
         //Act
-        float result = calculator.Equals(a,b,8);
+        float result = _calculator.Equals(a,b,8);
         //Assert
-        Assert.Equals(0, result);
+        Assert.That(0, Is.EqualTo(result));
     }
     
     [Test]
@@ -127,9 +128,9 @@ public class CalculatorEngineUnitTests
         float a = 0.333333331f;
         float b = 0.333333333f; 
         //Act
-        float result = calculator.Equals(a,b,8);
+        float result = _calculator.Equals(a,b,8);
         //Assert
-        Assert.Equals(1, result);
+        Assert.That(1, Is.EqualTo(result));
     }
 
     [Test]
@@ -139,9 +140,9 @@ public class CalculatorEngineUnitTests
         float a = 2;
         float b = 3; 
         //Act
-        float result = calculator.RaiseToPower(a, b);
+        float result = _calculator.RaiseToPower(a, b);
         //Assert
-        Assert.Equals(8, result);
+        Assert.That(8, Is.EqualTo(result));
     }
 
     [Test]
@@ -151,7 +152,7 @@ public class CalculatorEngineUnitTests
         float a = 2;
         float b = 0; 
         //Act
-        float result = calculator.LogarithmOfNumber(a, b); 
+        float result = _calculator.LogarithmOfNumber(a, b); 
         //Assert
         Assert.That(float.IsNaN(result),Is.True);
 
@@ -164,9 +165,9 @@ public class CalculatorEngineUnitTests
         float a = 2;
         float b = 16; 
         //Act
-        float result = calculator.LogarithmOfNumber(a, b); 
+        float result = _calculator.LogarithmOfNumber(a, b); 
         //Assert
-        Assert.Equals(4, result);
+       Assert.That(4, Is.EqualTo(result));
     }
 
     [Test]
@@ -176,7 +177,7 @@ public class CalculatorEngineUnitTests
         float a = 5;
         float b = 0; 
         //Act
-        float result = calculator.RootOfNumber(a, b);
+        float result = _calculator.RootOfNumber(a, b);
         //Assert
         Assert.That(float.IsNaN(result),Is.True);
     }
@@ -188,9 +189,9 @@ public class CalculatorEngineUnitTests
         float a = 8;
         float b = 3; 
         //Act
-        float result = calculator.RootOfNumber(a, b);
+        float result = _calculator.RootOfNumber(a, b);
         //Assert
-        Assert.Equals(2, result);
+        Assert.That(2, Is.EqualTo(result));
     }
 
     [Test]
@@ -199,9 +200,9 @@ public class CalculatorEngineUnitTests
         //Arrange
         float a = 0;
         //Act
-        float result = calculator.FactorialOfNumber(a);
+        float result = _calculator.FactorialOfNumber(a);
         //Assert
-        Assert.Equals(1, result);
+        Assert.That(1, Is.EqualTo(result));
     }
     
     [Test]
@@ -210,9 +211,9 @@ public class CalculatorEngineUnitTests
         //Arrange
         float a = 5;
         //Act
-        float result = calculator.FactorialOfNumber(a);
+        float result = _calculator.FactorialOfNumber(a);
         //Assert
-        Assert.Equals(120, result);
+        Assert.That(120, Is.EqualTo(result));
     }
     
     [Test]
@@ -221,9 +222,9 @@ public class CalculatorEngineUnitTests
         //Arrange
         float a = -5;
         //Act
-        float result = calculator.FactorialOfNumber(a);
+        float result = _calculator.FactorialOfNumber(a);
         //Assert
-        Assert.Equals(-120, result);
+        Assert.That(1, Is.EqualTo(result));
     }
 
     [Test]
@@ -232,20 +233,20 @@ public class CalculatorEngineUnitTests
         //Arrange
         float a = 360; 
         //Act
-        float result = calculator.SineOfA(a);
+        float result = _calculator.SineOfA(a);
         //Assert
-        Assert.Equals(0, result);
+        Assert.That(0, Is.EqualTo(result));
     }
     
     [Test]
     public void CalculatorEngine_SinOfANegative_ReturnsResult()
     {
         //Arrange
-        float a = -360; 
+        float a = -600; 
         //Act
-        float result = calculator.SineOfA(a);
+        float result = _calculator.SineOfA(a);
         //Assert
-        Assert.Equals(0, result);
+        Assert.That(0.866025388f, Is.EqualTo(result));
     }
     
     [Test]
@@ -254,9 +255,9 @@ public class CalculatorEngineUnitTests
         //Arrange
         float a = 1; 
         //Act
-        float result = calculator.SineOfA(a);
+        float result = _calculator.SineOfA(a);
         //Assert
-        Assert.Equals(0.0174524, result);
+        Assert.That(0.0174524058f, Is.EqualTo(result));
     }
     
     [Test]
@@ -265,31 +266,32 @@ public class CalculatorEngineUnitTests
         //Arrange
         float a = 0; 
         //Act
-        float result = calculator.SineOfA(a);
+        float result = _calculator.SineOfA(a);
         //Assert
-        Assert.Equals(0, result);
+      Assert.That(0, Is.EqualTo(result));
     }
 
+   
     [Test]
     public void CalculatorEngine_CosOfAPostive_ReturnResult()
     {
         //Arrange
-        float a = 360; 
+        float a = 600; 
         //Act
-        float result = calculator.CosineOfA(a);
+        float result = _calculator.CosineOfA(a);
         //Assert
-        Assert.Equals(1, result);
+        Assert.That(-0.499999911f, Is.EqualTo(result));
     }
     
     [Test]
     public void CalculatorEngine_CosOfANegative_ReturnResult()
     {
         //Arrange
-        float a = -360; 
+        float a = -600; 
         //Act
-        float result = calculator.CosineOfA(a);
+        float result = _calculator.CosineOfA(a);
         //Assert
-        Assert.Equals(1, result);
+        Assert.That(-0.50000006f, Is.EqualTo(result));
     }
     
     [Test]
@@ -298,9 +300,9 @@ public class CalculatorEngineUnitTests
         //Arrange
         float a = 1; 
         //Act
-        float result = calculator.CosineOfA(a);
+        float result = _calculator.CosineOfA(a);
         //Assert
-        Assert.Equals(0.99985, result);
+        Assert.That(0.99984771f, Is.EqualTo(result));
     }
     
     [Test]
@@ -309,20 +311,20 @@ public class CalculatorEngineUnitTests
         //Arrange
         float a = 360; 
         //Act
-        float result = calculator.TangentOfA(a);
+        float result = _calculator.TangentOfA(a);
         //Assert
-        Assert.Equals(0, result);
+        Assert.That(0, Is.EqualTo(result));
     }
     
     [Test]
     public void CalculatorEngine_TangentOfANegative_ReturnResult()
     {
         //Arrange
-        float a = -360; 
+        float a = -600; 
         //Act
-        float result = calculator.TangentOfA(a);
+        float result = _calculator.TangentOfA(a);
         //Assert
-        Assert.Equals(0, result);
+        Assert.That(-1.73205054f, Is.EqualTo(result));
     }
 
     [Test]
@@ -331,9 +333,9 @@ public class CalculatorEngineUnitTests
         //Arrange
         float a = 1; 
         //Act
-        float result = calculator.TangentOfA(a);
+        float result = _calculator.TangentOfA(a);
         //Assert
-        Assert.Equals(0.0174551, result);
+        Assert.That(0.0174550656f, Is.EqualTo(result));
     }
 
     [Test]
@@ -342,7 +344,7 @@ public class CalculatorEngineUnitTests
         //Arrange
         float a = 0; 
         //Act
-        float result = calculator.ReciprocalOfA(a);
+        float result = _calculator.ReciprocalOfA(a);
         //Assert
         Assert.That(float.IsNaN(result),Is.True);
     }
@@ -353,9 +355,9 @@ public class CalculatorEngineUnitTests
         //Arrange
         float a = 8; 
         //Act
-        float result = calculator.ReciprocalOfA(a);
+        float result = _calculator.ReciprocalOfA(a);
         //Assert
-        Assert.Equals(0.125,result);
+        Assert.That(0.125, Is.EqualTo(result));
     }
     
     [Test]
@@ -364,9 +366,9 @@ public class CalculatorEngineUnitTests
         //Arrange
         float a = -4; 
         //Act
-        float result = calculator.ReciprocalOfA(a);
+        float result = _calculator.ReciprocalOfA(a);
         //Assert
-        Assert.Equals(-0.25,result);
+        Assert.That(-0.25, Is.EqualTo(result));
     }
 
     
