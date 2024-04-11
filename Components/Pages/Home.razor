@@ -1,42 +1,84 @@
 ﻿@page "/"
+@rendermode InteractiveServer
 
 <PageTitle>Calulator</PageTitle>
 
-<h1>Caculator</h1>
+<div class="calculator-header">
+    <h1>Calculator</h1>
+    <button class = "clear" @onclick="Clear">Clear</button>
+</div>
 
+<div class="instruction-section">
+    <p>Enter value(s) below and select an operation</p>
+     @Result
+</div>
 
+<div class="calculator-container">
+    <div class="error-message @(hasError ? "error" : "")">@(errorMessage)</div>
+    <div class="input-section">
+        <label for="inputA">Input A:</label>
+        <input id="inputA" @bind="InputA" type="number" />
+        <label for="inputB">Input B:</label>
+        <input id="inputB" @bind="InputB" type="number" />
+    </div>
+    
 
-<h2>Input A</h2>
+    <div class="operation-section">
+        <div>
+            <h3 class ="line">A and B</h3>
+            <button class= "button" @onclick="Add">A + B</button>
+            <button class= "button" @onclick="Subtract">A - B</button>
+            <button class= "button" @onclick="Multiplication">A * B</button>
+            <button class= "button" @onclick="Division">A / B</button>
+            <button class= "button" @onclick="Equals">A == B</button>
+            <button class= "button" @onclick="RaiseToPower">A ^ B</button>
+            <button class= "button" @onclick="LogarithmOfNumber">A log B</button>
+            <button class= "button" @onclick="RootOfNumber">A root B</button>
+        </div>
+        <div>
+            <h3 class ="line">A only</h3>
+            <button class= "button" @onclick="FactorialOfNumber">A!</button>
+            <button class= "button" @onclick="SineOfA">Sin A</button>
+            <button class= "button" @onclick="CosineOfA">Cos A</button>
+            <button  class= "button"@onclick="TangentOfA">Tan A</button>
+            <button class= "button" @onclick="ReciprocalOfA">1 / A</button>
+        </div>
+    </div>
+</div>
 
-<table id="calcu"> 
-    <tr> 
-        <td colspan="3"> 
-            <input type="text" id="result"> 
-        </td> 
-    </tr> 
-  
-    <tr> 
-        <td><input type="button" value="A+B"></td> 
-    </tr>
-    <tr> 
-        <td><input type="button" value="A-B"></td> 
-    </tr>
-    <tr> 
-        <td><input type="button" value="A*B"></td> 
-    </tr>
-    <tr> 
-        <td><input type="button" value="A/B"></td> 
-    </tr>
-    <tr> 
-        <td><input type="button" value="A==B"></td> 
-    </tr>
-    <tr> 
-        <td><input type="button" value="A^B"></td> 
-    </tr>
-    <tr> 
-        <td><input type="button" value="A log B"></td> 
-    </tr>
-      <tr> 
-            <td><input type="button" value="A root B"></td> 
-        =</tr>
-</table> 
+<style>
+    .clear{
+      width:200px;
+    
+    }
+    .calculator-header {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           
+        }
+      .operation-section{
+      
+               width: 50%;
+              display: flex; 
+              justify-content: space-between;
+      }
+      .line{
+      background-color: lightgrey;
+      width: 250px;
+      }
+          
+      .button{
+      display: block;
+       width:200px;
+      }
+   
+     .instruction-section {
+            margin-top: 20px;
+            background-color:#D2B48C;
+            width: 50%; 
+           
+      }
+       
+</style>

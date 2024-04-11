@@ -2,6 +2,20 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "Markdown/2.2.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Text.RegularExpressions": "4.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Markdown.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Markdown.dll": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "type": "package",
         "compile": {
@@ -93,7 +107,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Playwright/1.42.0": {
+      "Microsoft.Playwright/1.43.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
@@ -114,12 +128,12 @@
           "buildTransitive/Microsoft.Playwright.targets": {}
         }
       },
-      "Microsoft.Playwright.NUnit/1.42.0": {
+      "Microsoft.Playwright.NUnit/1.43.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.11.0",
-          "Microsoft.Playwright": "1.42.0",
-          "Microsoft.Playwright.TestAdapter": "1.42.0",
+          "Microsoft.Playwright": "1.43.0",
+          "Microsoft.Playwright.TestAdapter": "1.43.0",
           "NUnit": "3.13.2",
           "NUnit3TestAdapter": "4.0.0"
         },
@@ -134,10 +148,10 @@
           }
         }
       },
-      "Microsoft.Playwright.TestAdapter/1.42.0": {
+      "Microsoft.Playwright.TestAdapter/1.43.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Playwright": "1.42.0",
+          "Microsoft.Playwright": "1.43.0",
           "Microsoft.TestPlatform.ObjectModel": "17.3.0"
         },
         "compile": {
@@ -1095,6 +1109,19 @@
     }
   },
   "libraries": {
+    "Markdown/2.2.1": {
+      "sha512": "A6veXuFP1n50RbmFNtTgfHxnHmwMsgFLSCgS1xWbg5L8n5N6HFEksTlXocZ0LsmGW4leBzeLJd+BY7+g83zFJA==",
+      "type": "package",
+      "path": "markdown/2.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/Markdown.dll",
+        "lib/netstandard1.3/Markdown.dll",
+        "markdown.2.2.1.nupkg.sha512",
+        "markdown.nuspec"
+      ]
+    },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
       "sha512": "UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg==",
       "type": "package",
@@ -1305,10 +1332,10 @@
         "runtime.json"
       ]
     },
-    "Microsoft.Playwright/1.42.0": {
-      "sha512": "vH4dIqJFDRB8+qsoy6vWJwemXwTMDo51aYoDTNrlz+mVqbfZaeEReVdHvwbtIBwm4iADpFQf0xWRoR2pHVKbWQ==",
+    "Microsoft.Playwright/1.43.0": {
+      "sha512": "FvY6w9duxWBXe3gV6MSqvUcdF9daSBfDVUrYKcr4Fyro0nbiCf4hQUsPxx+CJ3P8PtSrzC675oU14qGzcrGNJw==",
       "type": "package",
-      "path": "microsoft.playwright/1.42.0",
+      "path": "microsoft.playwright/1.43.0",
       "files": [
         ".nupkg.metadata",
         ".playwright/node/LICENSE",
@@ -1317,6 +1344,8 @@
         ".playwright/node/linux-arm64/node",
         ".playwright/node/linux-x64/node",
         ".playwright/node/win32_x64/node.exe",
+        ".playwright/package/LICENSE",
+        ".playwright/package/NOTICE",
         ".playwright/package/README.md",
         ".playwright/package/ThirdPartyNotices.txt",
         ".playwright/package/api.json",
@@ -1591,21 +1620,21 @@
         ".playwright/package/lib/vite/recorder/assets/index-ljsTwXtJ.css",
         ".playwright/package/lib/vite/recorder/index.html",
         ".playwright/package/lib/vite/recorder/playwright-logo.svg",
-        ".playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-0bpaqixv.js",
-        ".playwright/package/lib/vite/traceViewer/assets/wsPort-_JBDEilC.js",
+        ".playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-VoWrltN_.js",
+        ".playwright/package/lib/vite/traceViewer/assets/testServerConnection-tVqhPPSp.js",
         ".playwright/package/lib/vite/traceViewer/assets/xtermModule-Yt6xwiJ_.js",
         ".playwright/package/lib/vite/traceViewer/codeMirrorModule.Hs9-1ZG4.css",
         ".playwright/package/lib/vite/traceViewer/codicon.zGuYmc9o.ttf",
-        ".playwright/package/lib/vite/traceViewer/index.-g_5lMbJ.css",
+        ".playwright/package/lib/vite/traceViewer/index.7jkaRTPn.js",
         ".playwright/package/lib/vite/traceViewer/index.html",
-        ".playwright/package/lib/vite/traceViewer/index.u51inEcm.js",
+        ".playwright/package/lib/vite/traceViewer/index.q21lh23x.css",
         ".playwright/package/lib/vite/traceViewer/playwright-logo.svg",
         ".playwright/package/lib/vite/traceViewer/snapshot.html",
         ".playwright/package/lib/vite/traceViewer/sw.bundle.js",
-        ".playwright/package/lib/vite/traceViewer/uiMode.Fb0bNA4H.js",
+        ".playwright/package/lib/vite/traceViewer/testServerConnection.8Q0MUFuR.css",
+        ".playwright/package/lib/vite/traceViewer/uiMode.bZ9kzPcL.css",
         ".playwright/package/lib/vite/traceViewer/uiMode.html",
-        ".playwright/package/lib/vite/traceViewer/uiMode.pWy0Re7G.css",
-        ".playwright/package/lib/vite/traceViewer/wsPort.zR1WIy9-.css",
+        ".playwright/package/lib/vite/traceViewer/uiMode.kRK_VDqu.js",
         ".playwright/package/lib/vite/traceViewer/xtermModule.0lwXJFHT.css",
         ".playwright/package/lib/zipBundle.js",
         ".playwright/package/lib/zipBundleImpl.js",
@@ -1622,14 +1651,14 @@
         "icon.png",
         "lib/netstandard2.0/Microsoft.Playwright.dll",
         "lib/netstandard2.0/Microsoft.Playwright.xml",
-        "microsoft.playwright.1.42.0.nupkg.sha512",
+        "microsoft.playwright.1.43.0.nupkg.sha512",
         "microsoft.playwright.nuspec"
       ]
     },
-    "Microsoft.Playwright.NUnit/1.42.0": {
-      "sha512": "HSNUtJE//bcTj8QwX0H0W6DLJgJGSdcSqEP69x+fBfKCH2rM8bcmSwIgmoA9TVQzS2GS0oRqCcb1Qa8S13XJVA==",
+    "Microsoft.Playwright.NUnit/1.43.0": {
+      "sha512": "MnMaAQ9f2TneRtqmXnKBo3HOVlwqA6rv1f/9JmPrhDyygslukvBZU2e3Dr4Rb0W5QieSYuCkiSJjVFm6WLySbw==",
       "type": "package",
-      "path": "microsoft.playwright.nunit/1.42.0",
+      "path": "microsoft.playwright.nunit/1.43.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1637,20 +1666,20 @@
         "lib/net462/Microsoft.Playwright.NUnit.dll",
         "lib/netcoreapp3.1/Microsoft.Playwright.NUnit.dll",
         "lib/netcoreapp3.1/Microsoft.Playwright.NUnit.runtimeconfig.json",
-        "microsoft.playwright.nunit.1.42.0.nupkg.sha512",
+        "microsoft.playwright.nunit.1.43.0.nupkg.sha512",
         "microsoft.playwright.nunit.nuspec"
       ]
     },
-    "Microsoft.Playwright.TestAdapter/1.42.0": {
-      "sha512": "nuw3auFM0OCdtF+Dz8HBku93ilGnT+32VbEkg7youpjLolFPujHn4BIhb6F6P+qYXibvAY2PWlurO7VdSaQHVQ==",
+    "Microsoft.Playwright.TestAdapter/1.43.0": {
+      "sha512": "otnayoy2Y8ggXFxImJmveMthPAr2HNv8jwgGFD+nrUgv5QjhTDUMDfBag4J8PTY8HokpwElkZDoGnVrwOmtKNA==",
       "type": "package",
-      "path": "microsoft.playwright.testadapter/1.42.0",
+      "path": "microsoft.playwright.testadapter/1.43.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
         "lib/netstandard2.0/Microsoft.Playwright.TestAdapter.dll",
-        "microsoft.playwright.testadapter.1.42.0.nupkg.sha512",
+        "microsoft.playwright.testadapter.1.43.0.nupkg.sha512",
         "microsoft.playwright.testadapter.nuspec"
       ]
     },
@@ -4445,7 +4474,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Microsoft.Playwright.NUnit >= 1.42.0",
+      "Markdown >= 2.2.1",
+      "Microsoft.Playwright.NUnit >= 1.43.0",
       "NUnit >= 4.1.0"
     ]
   },
@@ -4486,9 +4516,13 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Markdown": {
+            "target": "Package",
+            "version": "[2.2.1, )"
+          },
           "Microsoft.Playwright.NUnit": {
             "target": "Package",
-            "version": "[1.42.0, )"
+            "version": "[1.43.0, )"
           },
           "NUnit": {
             "target": "Package",

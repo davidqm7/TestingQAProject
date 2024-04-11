@@ -80,24 +80,50 @@ public class CalculatorEngine
 
     public float SineOfA(float a)
     {
-        return (float)Math.Sin(a); 
-
+        float normalizedAngle = a % 360;
+        if (normalizedAngle < 0)
+        {
+            normalizedAngle += 360;
+        }
+        float aRadians = (float)(normalizedAngle * Math.PI / 180.0);
+        return (float)Math.Sin(aRadians); 
     }
 
     public float CosineOfA(float a)
     {
-        return (float)Math.Cos(a);
-
+        float normalizedAngle = a % 360;
+        if (normalizedAngle < 0)
+        {
+            normalizedAngle += 360;
+        }
+        float aRadians = (float)(normalizedAngle * Math.PI / 180.0);
+        return (float)Math.Cos(aRadians); 
     }
 
     public float TangentOfA(float a)
     {
-        return (float)Math.Tan(a);
+        float normalizedAngle = a % 360;
+        if (normalizedAngle < 0)
+        {
+           
+            normalizedAngle += 360;
+        }
+    
+        
+        float aRadians = (float)(normalizedAngle * Math.PI / 180.0);
+    
+        
+        return (float)Math.Tan(aRadians); 
     }
 
     public float ReciprocalOfA(float a)
     {
-        return 1 / a; 
+        if (a == 0)
+        {
+            return float.NaN;
+        }
+        return 1 / a;
+        
     }
     
 

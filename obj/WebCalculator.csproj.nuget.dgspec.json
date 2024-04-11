@@ -38,9 +38,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Markdown": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
             "Microsoft.Playwright.NUnit": {
               "target": "Package",
-              "version": "[1.42.0, )"
+              "version": "[1.43.0, )"
             },
             "NUnit": {
               "target": "Package",
