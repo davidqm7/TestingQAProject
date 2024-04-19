@@ -19,7 +19,7 @@ This repository contains a web-based calculator server built using ASP.NET Blazo
 David Quintanilla - Completed everything. 
 
 ## Architecture
-The brower side comes from HTML, CSS, and Blazor components. The server side uses Blazor components, written in C#, handle how the calculator works and updates. For testing the web application uses NUnit. Uses Nunit for testing the methods and Playwright to test the UI behaves coorectly. 
+The brower side comes from HTML, CSS, and Blazor components. The server side uses Blazor components, written in C#, handle how the calculator works and updates. For testing the web application uses NUnit. Uses Nunit for testing the methods and Playwright to test the UI behaves correctly. 
 
 ![image](https://github.com/davidqm7/TestingQAProject/assets/128763329/126ea783-ec29-454c-9b57-089caf03c65d)
 
