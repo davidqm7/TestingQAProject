@@ -33,6 +33,8 @@ Before you begin, ensure you have the following dependencies installed:
 
     .JetBrains Rider- Can be installed from their website. Free for anyone who is a student. 
 
+    .Playwright- Install playwright
+
 1. Clone the repository:
 ```bash
 git clone <repository-url>
@@ -61,7 +63,14 @@ Open a web browser and navigate to http://localhost:5024
 ## Executing Unit Tests
 To build and execute all unit tests from the command line
 
-1.Run Unit tests
+1. Go to the project directory
+```bash
+cd project directory 
+```
+2. Run the unit tests
+```bash
+dotnet test --filter CalculatorEngineUnitTests.cs
+```
 
 ## Reviewing Unit Test Coverage
 ![image](https://github.com/davidqm7/TestingQAProject/assets/128763329/8b7f4a86-1b9d-420a-9cf0-dfedad4a4527)
@@ -73,9 +82,13 @@ To build and execute all end-to-end tests from the command line
 ```bash
 npm install -g playwright
 ```
-2. Run the end-to-end tests
+2. Go to the project directory
 ```bash
-playwright test
+cd project directory 
+```
+3. Run the end-to-end tests
+```bash
+dotnet test --filter CalculatorEndToEndTest.cs
 ```
 
 ## Final Video Presentation
