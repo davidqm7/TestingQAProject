@@ -1,6 +1,33 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\David\AppData\Local\JetBrains\Rider2023.3\resharper-host\temp\Rider\vAny\CoverageData\_WebCalculator.-404121695\Snapshot\snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=05af3f23_002D96be_002D4b2d_002D9f24_002Da27dd4e4864c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WebCaculatorUI_DivideByZero_ReturnsNaN" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7B79E0B1-EE41-477E-949F-3E1D25D91DC6::net8.0::WebCalculator.CalculatorEndToEndTests.WebCaculatorUI_DivideByZero_ReturnsNaN&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6976c9e4_002D531f_002D4d05_002Da46c_002D9c17cac6d96e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6976c9e4_002D531f_002D4d05_002Da46c_002D9c17cac6d96e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=aa641cbf_002Da189_002D4313_002D9272_002D12513f1b893f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WebCaculatorUI_DivideByZero_ReturnsNaN #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7B79E0B1-EE41-477E-949F-3E1D25D91DC6::net8.0::WebCalculator.CalculatorEndToEndTests.WebCaculatorUI_DivideByZero_ReturnsNaN&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f89585ec_002D55bd_002D4b1c_002D9757_002De9fd62e1d3e5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WebCalulatorUI_VerifyTitle_IsCaculator #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7B79E0B1-EE41-477E-949F-3E1D25D91DC6::net8.0::WebCalculator.CalculatorEndToEndTests.WebCalulatorUI_VerifyTitle_IsCaculator&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7B79E0B1-EE41-477E-949F-3E1D25D91DC6::net8.0::WebCalculator.CalculatorEngineUnitTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7B79E0B1-EE41-477E-949F-3E1D25D91DC6::net8.0::WebCalculator.CalculatorEndToEndTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fbfd0785_002D916f_002D4cf9_002Db437_002D45db62ee11dd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="WebCalulatorUI_VerifyTitle_IsCaculator" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7B79E0B1-EE41-477E-949F-3E1D25D91DC6::net8.0::WebCalculator.CalculatorEndToEndTests.WebCalulatorUI_VerifyTitle_IsCaculator&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7B79E0B1-EE41-477E-949F-3E1D25D91DC6::net8.0::WebCalculator.CalculatorEndToEndTests.WebCaculatorUI_DivideByZero_ReturnsNaN&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7B79E0B1-EE41-477E-949F-3E1D25D91DC6::net8.0::WebCalculator.CalculatorEndToEndTests.WebCaculatorUI_TestingClearButton_ReturnsDefaultState&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7B79E0B1-EE41-477E-949F-3E1D25D91DC6::net8.0::WebCalculator.CalculatorEndToEndTests.WebCaculatorUI_InvalidInputValues_ReturnsInvalidInput&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7B79E0B1-EE41-477E-949F-3E1D25D91DC6::net8.0::WebCalculator.CalculatorEngineUnitTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7B79E0B1-EE41-477E-949F-3E1D25D91DC6::net8.0::WebCalculator.CalculatorEndToEndTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
